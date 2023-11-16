@@ -53,9 +53,9 @@ const ControlPresupuesto = ({
       <div>
         <CircularProgressbar
           styles={buildStyles({
-            pathColor: porcentaje > 100 ? "#DC2626" : "#3b82f6",
+            pathColor: porcentaje > 100 ? "#DC2626" : "rgb(0,102,198)",
             trailColor: "#f5f5f5",
-            textColor: porcentaje > 100 ? "#DC2626" : "#3b82f6",
+            textColor: porcentaje > 100 ? "#DC2626" : "#000",
           })}
           value={porcentaje}
           text={`${porcentaje}% Gastado`}
