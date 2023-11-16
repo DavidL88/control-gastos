@@ -53,9 +53,9 @@ const ControlPresupuesto = ({
       <div>
         <CircularProgressbar
           styles={buildStyles({
-            pathColor: porcentaje > 100 ? "#DC2626" : "rgb(0,102,198)",
+            pathColor: porcentaje > 100 ? "#DC2626" : "rgb(0, 191, 255)",
             trailColor: "#f5f5f5",
-            textColor: porcentaje > 100 ? "#DC2626" : "#000",
+            textColor: porcentaje > 100 ? "#DC2626" : "#fff",
           })}
           value={porcentaje}
           text={`${porcentaje}% Gastado`}
@@ -67,13 +67,13 @@ const ControlPresupuesto = ({
           Resetear App
         </button>
         <p>
-          <span>Presupuesto: </span> {formatearCantidad(presupuesto)}
+          <span className="presupuesto">Presupuesto: </span> {formatearCantidad(presupuesto)}
         </p>
         <p className={`${disponible < 0 ? "negativo" : ""}`}>
-          <span>Disponible: </span> {formatearCantidad(disponible)}
+          <span className="disponible">Disponible: </span> {formatearCantidad(disponible)}
         </p>
         <p>
-          <span>Gastado: </span> {formatearCantidad(gastado)}
+          <span className="gastado">Gastado: </span> {formatearCantidad(gastado)}
         </p>
       </div>
     </div>

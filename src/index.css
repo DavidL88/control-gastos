@@ -27,9 +27,6 @@ html {
   height: 100vh;
 }
 
-h1 {
-  font-size: 4rem;
-}
 h2 {
   font-size: 3rem;
 }
@@ -38,14 +35,17 @@ h2 {
   box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
   -webkit-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
   -moz-box-shadow: 0px 9px 10px -10px rgba(0, 0, 0, 0.51);
-  background-color: var(--blanco);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(16, 16, 16, 0.40);
+  backdrop-filter: blur(24px);
   padding: 4rem;
   border-radius: 1.2rem;
 }
 
 header {
-  background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(255,61,0,1) 0%, rgba(0,30,120,1) 100%, rgba(70,252,212,1) 100%);
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,49,198,1) 100%);
 }
 
 header h1 {
@@ -53,7 +53,7 @@ header h1 {
   margin: 0;
   color: var(--blanco);
   text-align: center;
-
+  padding-inline: 1rem;
   text-transform: uppercase;
 }
 
@@ -91,10 +91,12 @@ header h1 {
   right: 0;
 }
 
-
+.formulario input[type="number"].nuevo-presupuesto:focus-visible {
+  outline-color: rgb(229, 151, 0);
+}
 
 .formulario label {
-  color: #000;
+  color: var(--blanco);
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -112,13 +114,14 @@ header h1 {
 }
 .formulario input[type="submit"] {
  
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(255,61,0,1) 0%, rgba(0,30,120,1) 100%, rgba(70,252,212,1) 100%);
+  background: rgb(255,255,255);
+  background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,49,198,1) 100%);
   border: none;
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
   margin-top: 2rem;
-  color: var(--blanco);
+  color: blue;
   font-weight: 900;
   text-transform: uppercase;
   font-size: 1.9rem;
@@ -211,7 +214,7 @@ header h1 {
 }
 .contenido-presupuesto p {
   font-weight: 400;
-  color: var(--gris-oscuro);
+  color: var(--blanco);
   font-size: 2.4rem;
   text-align: center;
 }
@@ -226,7 +229,7 @@ header h1 {
 }
 .contenido-presupuesto span {
   font-weight: 900;
-  color: #000;
+  color: deepskyblue;
 }
 .reset-app {
   border: none;
@@ -246,6 +249,14 @@ header h1 {
   cursor: pointer;
 }
 
+span.disponible {
+  color: greenyellow;
+}
+
+span.gastado {
+  color: orangered;
+}
+
 main {
   padding-top: 10rem;
 }
@@ -258,7 +269,7 @@ main {
 .filtros label {
   font-size: 3rem;
   font-weight: 900;
-  color: var(--gris-oscuro);
+  color: papayawhip;
 }
 .filtros select {
   flex: 1;
@@ -274,8 +285,9 @@ main {
   margin-top: 5rem;
 }
 .listado-gastos h2 {
-  color: var(--gris-oscuro);
+  color: orangered;
   font-weight: 900;
+  text-align: center;
 }
 .no-gastos {
   text-align: center;
@@ -298,7 +310,7 @@ main {
 
 .cantidad-gasto {
   font-size: 2.4rem;
-  color: var(--negro);
+  color: lavenderblush;
   font-weight: 900;
 }
 
@@ -316,7 +328,7 @@ main {
   margin: 0 0 0.3rem 0;
 }
 .descripcion-gasto .categoria {
-  color: var(--gris);
+  color: wheat;
   font-size: 1.6rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -325,7 +337,7 @@ main {
   margin-bottom: 1rem;
 }
 .descripcion-gasto .nombre-gasto {
-  color: var(--gris-oscuro);
+  color: whitesmoke;
   font-size: 2.4rem;
   font-weight: 700;
 }
@@ -335,7 +347,7 @@ main {
 .descripcion-gasto .fecha-gasto {
   font-size: 1.8rem;
   font-weight: 900;
-  color: var(--gris-oscuro);
+  color: blanchedalmond;
 }
 .descripcion-gasto .fecha-gasto span {
   font-weight: 400;
