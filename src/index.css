@@ -82,11 +82,22 @@ header h1 {
   margin-bottom: 2rem;
 }
 
+.dropdown-left {
+  left: 0;
+}
+
+.dropdown-right {
+  right: 0;
+}
+
+
+
 .formulario label {
   color: var(--azul);
   font-size: 2.8rem;
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .formulario input[type="text"],
@@ -185,6 +196,7 @@ header h1 {
 .formulario input[type="number"].nuevo-presupuesto {
   font-size: 2.8rem;
   text-align: center;
+  width: 100%;
 }
 
 .contenedor-presupuesto svg {
@@ -252,6 +264,7 @@ main {
   border-radius: 1rem;
   text-align: center;
   background-color: var(--gris-claro);
+  width: 100%;
 }
 
 .listado-gastos {
@@ -273,6 +286,11 @@ main {
   gap: 2rem;
   margin-bottom: 2rem;
   width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.gasto p {
+  margin-block: 0;
 }
 
 .cantidad-gasto {
@@ -322,8 +340,8 @@ main {
 
 .nuevo-gasto {
   position: fixed;
-  bottom: 5rem;
-  right: 5rem;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .nuevo-gasto img {
@@ -347,6 +365,7 @@ main {
   top: 3rem;
   width: 3rem;
   height: 3rem;
+  z-index: 30;
 }
 .modal .cerrar-modal img {
   width: 100%;
@@ -370,6 +389,8 @@ body .modal {
 .modal .formulario.animar {
   position: relative;
   opacity: 1;
+  width: 100%;
+  padding-inline: 16px;
 }
 
 .modal .formulario.cerrar {
@@ -381,7 +402,8 @@ body .modal {
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-  font-size: 1rem !important;
+  font-size: 8px !important;
+  font-weight: 700;
 }
 
 /*** SWIPE LIST OVERRIDES **/

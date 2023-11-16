@@ -27,6 +27,8 @@ const Modal = ({
     }
   }, []);
 
+  const [dropdownPosition, setDropdownPosition] = useState("dropdown-right");
+
   const ocultarModal = () => {
     setAnimarModal(false);
     setGastoEditar({});
@@ -89,6 +91,11 @@ const Modal = ({
             id="categoria"
             value={categoria}
             onChange={(e) => setCategoria(e.target.value)}
+            className={`${
+              dropdownPosition === "dropdown-left"
+                ? "dropdown-left"
+                : "dropdown-right"
+            }`}
           >
             <option value="">-- Seleccione --</option>
             <option value="ahorro">-- Ahorro --</option>
