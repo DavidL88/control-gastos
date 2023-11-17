@@ -406,6 +406,7 @@ body .modal {
   opacity: 1;
   width: 100%;
   padding-inline: 16px;
+  height: 100%;
 }
 
 .modal .formulario.cerrar {
