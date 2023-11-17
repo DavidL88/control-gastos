@@ -27,6 +27,14 @@ const Modal = ({
     }
   }, []);
 
+  useEffect(() => {
+    if (animarModal) {
+      document.body.classList.add("modal-abierto");
+    } else {
+      document.body.classList.remove("modal-abierto");
+    }
+  }, [animarModal]);
+
   const [dropdownPosition, setDropdownPosition] = useState("dropdown-right");
 
   const ocultarModal = () => {
