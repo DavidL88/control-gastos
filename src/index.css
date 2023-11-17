@@ -408,7 +408,7 @@ body .modal {
   padding-inline: 16px;
   block-size: 100%;
   padding-block: 70px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .modal .formulario.cerrar {
